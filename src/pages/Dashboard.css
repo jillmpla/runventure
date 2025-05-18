@@ -1,0 +1,433 @@
+/* src/pages/Dashboard.css */
+
+/* Global Layout */
+.dashboard-title {
+  text-align: left;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+.toggle-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+.tab-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #30B0C7;
+  border-bottom: 2px solid #30B0C7;
+  padding: 8px 12px;
+}
+
+/* Navigation Tabs */
+.tab-active,
+.tab-inactive,
+.view-tab {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.tab-active,
+.view-tab.active {
+  background-color: #30B0C7;
+  color: white;
+}
+
+.view-tab {
+  background-color: #f0f0f0;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Start Run Button */
+.start-run-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.start-run {
+  background-color: #2e9f75;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.trainingplans-tooltipZ {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #888;
+  margin-left: 6px;
+  cursor: help;
+}
+
+.trainingplans-tooltipZ::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.trainingplans-tooltipZ:hover::after {
+  opacity: 1;
+}
+
+/* Calendar */
+.calendar-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.arrow-btn {
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day-name {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.calendar-day {
+  background-color: #ddd;
+  padding: 30px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+.calendar-day:hover {
+  background-color: #ccc;
+}
+
+.calendar-day.selected {
+  border: 2px solid #30B0C7;
+  background-color: #f0faff;
+}
+
+.calendar-day.blank {
+  background-color: #d3d3d3;
+  pointer-events: none;
+}
+
+.calendar-add-box {
+  grid-column: span 7;
+  background-color: #f9f9f9;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* Stats */
+.stats-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.stat-block {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Run List */
+.run-history-list {
+  margin-top: 20px;
+  padding: 0 10px;
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.run-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 12px;
+  position: static !important;
+}
+
+.delete-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.modal-buttons,
+.modal-buttons1,
+.modal-buttons9 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.confirm-btn,
+.confirm-btn1,
+.confirm-btn9 {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn,
+.cancel-btn1,
+.cancel-btn9 {
+  background-color: #ddd;
+  color: #333;
+  padding: 8px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Button Hover Effects */
+.start-run:hover {
+  background-color: #279066;
+  transform: translateY(-1px);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-tab:hover {
+  background-color: #e0f7fb;
+  color: #30B0C7;
+  transition: background-color 0.3s ease;
+}
+
+.view-tab.active:hover {
+  background-color: #30B0C7;
+  color: white;
+}
+
+.calendar-add-box:hover {
+  background-color: #e0f0f5;
+  border-color: #30B0C7;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+.calendar-day:hover {
+  background-color: #bbb;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover .delete-icon {
+  filter: brightness(0.8);
+  transform: scale(1.05);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 1.5rem;
+    padding: 0 12px;
+  }
+
+  .toggle-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .start-run {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .calendar-wrapper {
+    padding: 20px;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 10px;
+  }
+
+  .view-toggle {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .view-tab {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .stats-bar {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .calendar-grid {
+    gap: 8px;
+  }
+
+  .calendar-day {
+    font-size: 1rem;
+    padding: 20px 0;
+  }
+
+  .run-history-list {
+    padding: 0 12px;
+  }
+
+  .run-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.95rem;
+  }
+
+  .run-list-text {
+    width: 100%;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+  }
+
+  .modal {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modal-buttons,
+  .modal-buttons1,
+  .modal-buttons9 {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .confirm-btn,
+  .cancel-btn,
+  .confirm-btn1,
+  .cancel-btn1,
+  .confirm-btn9,
+  .cancel-btn9 {
+    width: 100%;
+    padding: 12px;
+  }
+}

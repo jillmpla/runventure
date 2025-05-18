@@ -1,0 +1,404 @@
+/* src/pages/SocialChallenges.css */
+
+/* Typography and Titles */
+.section-title,
+.modal-title,
+.update-modal h2,
+.tab-label {
+  font-family: 'Jockey One', sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tab-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #30B0C7;
+  border-bottom: 2px solid #30B0C7;
+  padding: 8px 12px;
+  cursor: default;
+}
+
+.challenge-title,
+.encouragement {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.challenge-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.encouragement {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Buttons and Shared Styles */
+.btn-outline,
+button,
+.share-btn,
+.add-custom-btn,
+.update-btn,
+.complete-btn,
+.confirm-btn,
+.close-update,
+.share-icon {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.btn-outline,
+.add-custom-btn,
+.share-btn,
+.see-btn {
+  border: 2px solid black;
+  padding: 8px 16px;
+  background: none;
+  color: black;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline:hover,
+.add-custom-btn:hover,
+.share-btn:hover,
+.see-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.update-btn {
+  background-color: #2e9f75;
+  color: white;
+  padding: 6px 14px;
+}
+
+.confirm-btn {
+  background-color: #2e9f75;
+  color: white;
+  padding: 8px 16px;
+  margin-top: 10px;
+}
+
+.complete-btn {
+  background-color: #30B0C7;
+  color: white;
+  padding: 8px 14px;
+  margin-top: 10px;
+}
+
+.close-update {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.share-icon {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+/* Layout and Containers */
+.toggle-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+.challenge-list {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.challenge-card {
+  position: relative;
+  background-color: #fdfdfd;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Challenge Cards & Progress */
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: block;
+  z-index: 2;
+}
+
+.delete-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.progress-bar-container {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  height: 20px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease;
+  background-color: #30B0C7;
+}
+
+.progress-bar-fill[data-complete="true"] {
+  background-color: #2e9f75;
+}
+
+.challenge-controls,
+.challenge-footer,
+.update-input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.challenge-footer {
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.update-input-section {
+  margin-top: 15px;
+}
+
+.update-input-section input {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 160px;
+}
+
+/* Modals and Overlays */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+.modal-buttons1 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.confirm-btn1 {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn1 {
+  background-color: #ddd;
+  color: #333;
+  padding: 8px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Modal Content Layout */
+.update-modal .challenge-icon {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.challenge-preview {
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+.image-modal,
+.participants-modal,
+.share-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Icons and Visuals */
+.challenge-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.challenge-divider img {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+}
+
+.challenge-icon_update,
+.challenge-icon_updateA,
+.challenge-icon_updateB,
+.sharing_icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.challenge-icon_update img {
+  width: 60px;
+}
+
+.challenge-icon_updateA img {
+  width: 100px;
+}
+
+.challenge-icon_updateB img {
+  width: 150px;
+}
+
+.sharing_icons img {
+  width: 50px;
+}
+
+.participant-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Utilities and Misc */
+.divider-horizontal {
+  margin: 20px auto;
+  border: none;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.confirm-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 20px;
+  padding: 0 10px;
+  word-wrap: break-word;
+}
+
+button:focus {
+  outline: 2px solid #007aff;
+  outline-offset: 2px;
+}
+
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .challenge-list {
+    padding: 20px;
+    margin: 0 10px 20px;
+  }
+
+  .challenge-card {
+    padding: 16px;
+  }
+
+  .challenge-title {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .challenge-controls,
+  .challenge-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-outline,
+  .update-btn,
+  .share-btn,
+  .add-custom-btn,
+  .see-btn,
+  .confirm-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  .modal {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,220 @@
+/* src/pages/PostRun.css */
+
+/* Main container for the Post-Run page */
+.post-run-page {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+/* Displays the date of the run */
+.run-date {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Close button in the top-left to return to dashboard */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Layout for the 3-column stats section */
+.stats-columns {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid #999;
+  border-radius: 12px;
+  padding: 20px 20px 20px;
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+}
+
+/* Shared styling for each stat column (left, center, right) */
+.stat-col {
+  width: 33.33%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  margin: 5px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Center column with vertical stacking and spacing */
+.center-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Large number/statistic */
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Label below each stat */
+.stat-label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Title at the top of each column */
+.column-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 0;
+  white-space: normal; 
+  word-break: break-word; 
+  text-align: center;
+}
+
+/* Icon styling for performance highlights and tips */
+.highlight-icon {
+  width: 50px;
+  margin: 0 auto 15px; 
+  display: block;
+}
+
+/* Styling for the list of highlights and tips */
+.highlight-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Each list item: centered content with spacing */
+.highlight-list li {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Special styling when there are no highlights to show */
+.no-highlights-wrapper li {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  margin-top: 65px;
+}
+
+/* Light message shown if hydration tip is not needed */
+.no-hydration {
+  font-style: italic;
+  color: #777;
+}
+
+/* Title at the top of the entire summary section */
+.summary-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #2e2e2e;
+}
+
+/* Container for the whole post-run summary section */
+.summary-wrapper {
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  border: 1px solid #ddd;
+}
+
+/* Specific icon spacing inside side columns */
+.side-col .highlight-icon {
+  margin-top: 45px;
+  margin-bottom: 15px;
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Remove top margin from the first stat block */
+.center-col .stat-block:first-of-type {
+  margin-top: 0;
+}
+.stat-block:first-of-type {
+  margin-top: 0;
+}
+
+/* Confetti animation keyframes */
+@keyframes confettiPop {
+  0% {
+    transform: scale(0.8) translateY(-10px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Confetti icon animation on page load */
+.confetti-burst {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+  animation: confettiPop 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Smaller confetti size for mobile */
+@media (max-width: 480px) {
+  .confetti-burst {
+    animation: confettiPop 0.6s ease-out forwards;
+    width: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .column-title {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .summary-title {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+}
+
+

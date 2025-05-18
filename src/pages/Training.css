@@ -1,0 +1,683 @@
+/* src/pages/TrainingPlans.css */
+
+/* Typography and Headings */
+.dashboard-titleTP {
+  text-align: left;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+.trainingplans-tab-labelTP {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #30B0C7;
+  border-bottom: 2px solid #30B0C7;
+  padding: 8px 12px;
+  margin: 0 0 12px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  max-width: 1000px;
+  width: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.trainingplans-heading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.trainingplans-heading-wrapper h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Main Wrapper and Layout */
+.trainingplans-box-wrapper {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 30px 20px 20px 20px;
+  margin: 0 auto 30px;
+  max-width: 1000px;
+  background-color: #f9f9f9;
+}
+
+.trainingplans-edit-button-absolute {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Goals Layout */
+.trainingplans-goal-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.trainingplans-goal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.trainingplans-goal-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+.trainingplans-goal-badge {
+  background-color: #2e9f75;
+  color: white;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Daily Tasks and Chart */
+.trainingplans-daily-tasks {
+  border: 1px solid #999;
+  border-radius: 10px;
+  padding: 30px; 
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trainingplans-daily-tasks h3 {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.trainingplans-daily-tasks ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 16px 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.trainingplans-daily-tasks li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  background-color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.trainingplans-breakdown {
+  padding: 30px 0;
+  display: grid;
+  gap: 30px;
+}
+
+.trainingplans-performance-graph {
+  border: 1px solid #999;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trainingplans-performance-graph h3 {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.trainingplans-performance-graph .recharts-wrapper {
+  font-family: 'Poppins', sans-serif;
+}
+
+.performance-graph-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  max-width: 1000px;
+}
+
+/* Buttons */
+.trainingplans-edit-button,
+.trainingplans-edit-icon,
+.trainingplans-confirm-btn,
+.trainingplans-add-goal-btn,
+.trainingplans-plan-btn,
+.trainingplans-delete-goal-btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.trainingplans-edit-button {
+  border: 2px solid black;
+  color: black;
+  padding: 8px 16px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.trainingplans-edit-button:hover {
+  background-color: #f0f0f0;
+}
+
+.trainingplans-edit-icon {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.trainingplans-edit-icon:hover,
+.trainingplans-add-goal-btn:hover,
+.trainingplans-plan-btn:hover {
+  opacity: 0.8;
+  background-color: #f0f0f0;
+}
+
+.trainingplans-add-goal-btn,
+.trainingplans-confirm-btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+  min-width: 100px;
+  font-weight: bold;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trainingplans-add-goal-btn {
+  border: 2px solid #000;
+  background: none;
+  color: #000;
+  line-height: 1;
+  text-align: center;
+}
+
+.trainingplans-confirm-btn {
+  background-color: #2e9f75;
+  color: white;
+  border: none;
+  line-height: 1;
+  text-align: center;
+}
+
+.trainingplans-plan-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+  justify-items: center;
+}
+
+.trainingplans-plan-btn {
+  background-color: #2e9f75;
+  color: white;
+  padding: 10px 18px;
+}
+
+.trainingplans-plan-btnTP {
+  background-color: #ffffff;
+  color: #30B0C7;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  padding: 12px 16px;
+  margin: 6px;
+  border: 2px solid #30B0C7;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.trainingplans-plan-btnTP:hover {
+  background-color: #30B0C7;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(48, 176, 199, 0.3);
+}
+
+.trainingplans-plan-btnTP:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(48, 176, 199, 0.2);
+}
+
+.trainingplans-plan-btnTP.selected {
+  background-color: #30B0C7;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 0 2px rgba(48, 176, 199, 0.3);
+}
+
+.confirm-btn-TP {
+  background-color: #2e9f75;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 16px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: block;
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+
+.confirm-btn-TP:hover {
+  background-color: #278b65;
+  transform: scale(1.03);
+}
+
+.confirm-btn-TP:active {
+  background-color: #207654;
+  transform: scale(0.97);
+}
+
+.goal-button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.modal-buttons14 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.confirm-btn14 {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn14 {
+  background-color: #ddd;
+  color: #333;
+  padding: 8px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Modal */
+.trainingplans-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.trainingplans-modal {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.trainingplans-close-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.trainingplans-close-btn:hover {
+  color: #333;
+}
+
+.trainingplans-plan-btnTP.selected {
+  background-color: #208499;
+  transform: scale(1.03);
+}
+
+/* Goal Editing Modal */
+.trainingplans-goal-group {
+  margin-bottom: 20px;
+  text-align: left;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.trainingplans-goal-group:hover {
+  background-color: #f5f5f5;
+}
+
+.trainingplans-goal-group label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  display: block;
+  color: #222;
+}
+
+.trainingplans-goal-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trainingplans-goal-row input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  font-family: 'Poppins', sans-serif;
+}
+
+.trainingplans-drag-icon {
+  cursor: grab;
+  font-size: 1.2rem;
+  user-select: none;
+  color: #666;
+}
+
+.trainingplans-drag-icon:active {
+  cursor: grabbing;
+}
+
+.trainingplans-delete-goal-btn {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  padding: 6px;
+}
+
+.trainingplans-delete-goal-btn:hover {
+  color: #c0392b;
+}
+
+.trainingplans-goal-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.trainingplans-goal-row input {
+  flex: 1 1 auto;
+  min-width: 250px;
+  max-width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trainingplans-goal-row input:focus {
+  outline: none;
+  border-color: #30B0C7;
+  box-shadow: 0 0 0 2px rgba(48, 176, 199, 0.2);
+}
+
+.trainingplans-delete-goal-btn {
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  color: #e74c3c;
+  transition: background-color 0.2s ease;
+}
+
+.trainingplans-delete-goal-btn:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #c0392b;
+}
+
+.char-count {
+  font-size: 0.75rem;
+  color: #666;
+  margin-left: auto;
+  margin-top: 4px;
+  display: block;
+  text-align: right;
+}
+
+/* Tooltip */
+.trainingplans-tooltip {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #888;
+  margin-left: 6px;
+  cursor: help;
+}
+
+.trainingplans-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.trainingplans-tooltip:hover::after {
+  opacity: 1;
+}
+
+/* Chart Legend */
+.custom-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 8px 0 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .dashboard-titleTP {
+    font-size: 1.5rem;
+    padding: 0 12px;
+  }
+
+  .trainingplans-tab-labelTP {
+    font-size: 0.9rem;
+    padding-left: 12px;
+  }
+
+  .trainingplans-box-wrapper {
+    padding: 20px 16px;
+    margin: 0 10px 30px;
+  }
+
+  .trainingplans-edit-button-absolute {
+    top: 10px;
+    right: 10px;
+  }
+
+  .trainingplans-goal-list {
+    width: 100%;
+  }
+
+  .trainingplans-goal-item {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.95rem;
+  }
+
+  .trainingplans-goal-row {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .trainingplans-goal-row input {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .char-count {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .trainingplans-breakdown {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .trainingplans-daily-tasks ul {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .trainingplans-modal {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .trainingplans-plan-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trainingplans-plan-btnTP {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .confirm-btn-TP {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .goal-button-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .trainingplans-delete-goal-btn {
+    align-self: flex-end;
+  }
+
+  .modal-buttons14 {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .confirm-btn14,
+  .cancel-btn14 {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .performance-graph-wrapper {
+    min-width: 600px;
+  }
+
+  .trainingplans-performance-graph {
+    overflow-x: scroll;
+  }
+
+  .recharts-wrapper {
+    min-width: 600px;
+  }
+}
+
+  

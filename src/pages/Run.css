@@ -1,0 +1,232 @@
+/* src/pages/Run.css */
+
+/* Main container for the Run page */
+.run-page {
+  text-align: center;
+  padding: 30px 20px;
+  min-height: calc(100vh - 140px); /* Full height minus header/footer */
+}
+
+/* Wrapper for the Google Map */
+.map-container {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Main header text for the run session */
+.run-header {
+  font-family: 'Jockey One', sans-serif;
+  font-size: 2rem;
+  text-align: left;
+  margin: 0 auto 0;
+  max-width: 1000px;
+  padding: 0 10px;
+}
+
+/* Subheader beneath the run header */
+.run-subheader {
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 2px auto 20px;
+  max-width: 1000px;
+  padding: 0 10px;
+}
+
+/* Controls for run actions like pause/resume */
+.run-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Shared style for resume/pause buttons */
+.resume-button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover animation for resume/pause buttons */
+.resume-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific style for "Resume" button */
+.resume-button.resume {
+  background-color: #2e9f75;
+}
+
+/* Hover state for "Resume" button */
+.resume-button.resume:hover {
+  background-color: #279066;
+}
+
+/* Specific style for "Pause" button */
+.resume-button.pause {
+  background-color: #d9534f;
+}
+
+/* Hover state for "Pause" button */
+.resume-button.pause:hover {
+  background-color: #c64542;
+}
+
+/* Style for the hold-to-finish button */
+.hold-finish {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+/* Active state for hold-to-finish (on press) */
+.hold-finish:active {
+  background-color: #30B0C7;
+  color: white;
+}
+
+/* Container for displaying run statistics */
+.run-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+/* Each stat box inside the run-stats section */
+.run-stats div {
+  text-align: center;
+}
+
+/* Large number for a stat (like distance, time) */
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Smaller label for the stat type */
+.stat-label {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Style for geolocation error message */
+.location-error {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: red;
+  text-align: center;
+}
+
+/* Retry button for geolocation errors */
+.location-retry-btn {
+  background-color: #2e9f75;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+/* Button to re-center the map on user's location */
+.center-map-btn {
+  margin: 0 auto 30px;
+  display: block;
+  padding: 8px 18px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0faff;
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: 1px solid #ccc;
+}
+
+/* Disabled state for the center map button */
+.center-map-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Hover state for the center map button */
+.center-map-btn:hover {
+  background-color: #30B0C7;
+  color: white;
+}
+
+/* Spotify section containing login, playlist, or embed */
+.spotify-section {
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Style for dropdown/select inside Spotify section */
+.spotify-section select {
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Title inside the Spotify section */
+.spotify-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin: 15px 0 10px;
+}
+
+/* Subtext or status messages in the Spotify block */
+.spotify-status {
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Divider line between Spotify section elements */
+.spotify-divider {
+  margin: 20px auto;
+  border: none;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+/* Wrapper around run tracking visuals and info */
+.run-activity-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  background-color: #fff;
+}

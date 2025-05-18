@@ -1,0 +1,285 @@
+/* src/pages/RouteConditions.css */
+
+/* Main layout */
+.route-conditions-page {
+  padding: 30px 20px;
+  text-align: left;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.page-overall-block {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  background-color: #fff;
+}
+
+/* Title + subtitle block */
+.route-header-block1 {
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+.route-title1 {
+  text-align: left;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 2rem;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+.route-label1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #30B0C7;
+  border-bottom: 2px solid #30B0C7;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+/* Route summary + data boxes */
+.route-summary {
+  font-family: 'Poppins', sans-serif;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.condition-tags {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  gap: 15px;
+}
+
+.condition-box {
+  flex: 1 1 150px;
+  min-width: 120px;
+  background-color: #f9f9f9;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.condition-box:hover {
+  transform: scale(1.03);
+}
+
+.condition-value {
+  color: #30B0C7;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.condition-label {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Difficulty-specific colors */
+.difficulty-easy {
+  color: #20785b; 
+  font-weight: 700;
+  text-shadow: 0 0 1px #ccc;
+}
+
+.difficulty-medium {
+  color: #c28a00; 
+  font-weight: 700;
+  text-shadow: 0 0 1px #ccc;
+}
+
+.difficulty-hard {
+  color: #c62828;
+  font-weight: 700;
+  text-shadow: 0 0 1px #ccc;
+}
+
+/* Tags (like FUN, PEACEFUL) */
+.user-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #30B0C7;
+  color: white;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin: 0 5px;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+}
+
+/* Confirm + Reset buttons */
+.confirm-btn-rc {
+  display: block;
+  margin: 20px auto 0;
+  background-color: #2e9f75;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.confirm-btn-rc:hover {
+  background-color: #279066;
+  transform: translateY(-2px);
+}
+
+.reset-route-btn {
+  margin-top: 15px;
+  padding: 10px 16px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.reset-route-btn:hover {
+  background-color: #c64542;
+  transform: translateY(-2px);
+}
+
+/* Google Map display */
+.map-container,
+.modal-map-box > div {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Modal overlay + contents */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-map-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal-title {
+  font-family: 'Jockey One', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.close-modal-btn,
+.close-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  top: 10px;
+  left: 10px;
+}
+
+.close-btn {
+  top: 20px;
+}
+
+/* Location error + retry */
+.location-error {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: red;
+  margin: 10px auto;
+}
+
+.location-retry-btn {
+  background-color: #2e9f75;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .condition-tags {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .route-title1,
+  .route-label1 {
+    text-align: center;
+  }
+
+  .modal-map-box {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+  }
+
+  .confirm-btn,
+  .reset-route-btn,
+  .location-retry-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+
+
+
+  
