@@ -85,7 +85,7 @@ You can test out the live prototype here:
 
 ---
 
-## 🏃‍♀️ How to Use RunVenture
+## 👟 How to Use RunVenture
 
 1. **Create an Account**  
    Sign up with any email and password to unlock your personalized dashboard.
@@ -228,7 +228,7 @@ Once the user confirms the route:
 
 ---
 
-## 🏃 FEATURE 2: Live Run Tracking with Map + Music ('Run.js')
+## 📍 FEATURE 2: Live Run Tracking with Map + Music ('Run.js')
 
 The `Run.js` page tracks your live run, visualizes your movement on a map, and plays music through Spotify during your session.
 
