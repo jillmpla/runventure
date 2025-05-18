@@ -13,7 +13,7 @@ You can test out the live prototype here:
 🔗 [https://runventureapp.com](https://runventureapp.com)
 
 - Use **any email address** and **any password** to create a test account.
-- There is **no real authentication** — login info is stored in `localStorage` for testing purposes only.
+- There is **no real authentication**. Login info is stored in `localStorage` for testing purposes only.
 - Once signed in, you’ll be redirected to the personalized dashboard to explore features like route tracking, training plans, and more.
 
 ⚠️ **Note:** This is a prototype intended for demonstration and testing only. Do not use real credentials.
